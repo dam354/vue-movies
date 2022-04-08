@@ -1,6 +1,6 @@
-// MainSearch.stories.js
+// SectionTrending.stories.js
 
-import MainSearch from "./MainSearch.vue";
+import SectionTrending from "./SectionTrending.vue";
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -8,17 +8,15 @@ export default {
    * See https://storybook.js.org/docs/vue/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: "MainSearch",
-  component: MainSearch,
+  title: "SectionTrending",
+  component: SectionTrending,
 };
 
-const Template = (args) => ({
-  components: { MainSearch },
+export const Template = (args) => ({
+  components: { SectionTrending },
   setup() {
     //👇 The args will now be passed down to the template
     return { args };
   },
-  template: '<MainSearch placeholder="Search for movies or TV shows" v-bind="args"/>',
+  template: '<SectionTrending  v-bind="args"/>',
 });
-
-export const empty = Template.bind({});

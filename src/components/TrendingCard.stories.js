@@ -18,8 +18,11 @@ const Template = (args) => ({
     //👇 The args will now be passed down to the template
     return { args };
   },
-  template:
-    '<TrendingCard year="2019" category="movie" rating="PG" title="Beyond Earth" isBookmarked="true" v-bind="args"/>',
+  template: '<TrendingCard year="2019" category="Movie" rating="PG" title="Beyond Earth" v-bind="args"/>',
 });
 
-export const empty = Template.bind({});
+export const notBookmarked = Template.bind({});
+notBookmarked.args = { isBookmarked: true };
+
+export const Bookmarked = Template.bind({});
+Bookmarked.args = { isBookmarked: true };
